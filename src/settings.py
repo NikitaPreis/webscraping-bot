@@ -15,4 +15,4 @@ class Settings(BaseSettings):
 
     @property
     def db_url(self):
-        return (f'{self.DB_DRIVER}:///scraping.sqlite')
+        return (f'{self.DB_DRIVER}:///test.sqlite')

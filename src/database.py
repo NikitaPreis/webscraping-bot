@@ -1,14 +1,15 @@
-from sqlalchemy.ext.asyncio import (
-    AsyncSession,
-    async_sessionmaker,
-    create_async_engine
-)
+from sqlalchemy.ext.asyncio import (AsyncSession, async_sessionmaker,
+                                    create_async_engine)
 
 from src.models import Base
+from src.settings import Settings
+
+
+settings = Settings()
 
 
 engine = create_async_engine(
-    url='sqlite+aiosqlite:///test.sqlite',
+    url=settings.db_url,
     future=True,
     echo=True,
 )
