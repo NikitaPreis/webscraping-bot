@@ -8,7 +8,7 @@ def get_added_resources_text(
     """Generate message text with successfully processed sites."""
 
     added_resources = ''
-    for index, resource in enumerate(web_resources):
+    for index, resource in enumerate(web_resources, start=1):
         added_resources += text.added_resouce.format(
             index=index,
             title=resource.title,
