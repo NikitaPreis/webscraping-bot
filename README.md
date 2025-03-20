@@ -29,6 +29,11 @@ cd webscraping-bot
 Создать и активировать виртуальное окружение:
 ```
 python -m venv .venv
+source venv/Scripts/activate
+```
+
+Установить зависимости:
+```
 pip install -r requirements.txt
 ```
 
